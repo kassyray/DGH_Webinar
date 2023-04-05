@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Data Governance Handbook Walkthrough</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Kassy Raymond Technical Manager at GBADs Informatics University of Guelph, Canada" />
+    <meta name="date" content="2023-04-05" />
+    <script src="20230404_DGH_Walkthrough_files/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="my-custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class: center, middle
+
+&lt;img src="img/gbadsLogo.png" width="25%" /&gt;
+
+# Data Governance Handbook Walkthrough
+
+&lt;img src="img/collabocats.jpg" width="40%" /&gt;
+
+.large[Kassy Raymond | GBADs Informatics | 4 April 2023]
+---
+
+layout: true
+background-image: url(https://i0.wp.com/animalhealthmetrics.org/wp-content/uploads/2019/10/GBADs-LOGO-Black.png?w=360&amp;ssl=1)
+background-position: 5% 100%
+background-size: 15%
+
+---
+
+&lt;!-- edit name1 and name2 in the YAML above --&gt;
+
+
+
+
+
+
+
+# Agenda
+
+1. Introduction
+
+2. Data Governance Handbook Walkthrough
+
+3. Current challenges 
+
+4. Needs from collaborators 
+
+5. Discussion and next steps
+
+???
+
+This morning our webinar will consist of a 30 minute presentation followed by a discussion. We will have time at the end for questions 
+
+In our data governance handbook walkthrough today we are going to go through what data governance is and why we need data governance. 
+
+I will then walk you through the handbook, including our data principles, data goals, and the sections of handbook
+
+I will then talk about group responsibilities and current challenges with data governance 
+
+We will discuss what we need from collaborators when it comes to data governance 
+
+Then, we will have time for discussion and next steps.
+
+---
+
+# Agenda
+
+1. **Introduction**
+
+    * What is data governance? 
+    * Importance of data governance 
+    * Components of a data governance strategy/framework
+
+2. Data Governance Handbook Walkthrough
+
+3. Current challenges 
+
+4. Needs from collaborators 
+
+5. Discussion and next steps
+
+???
+So first, what is data governance, why is it important, and what components should be in our data governance strategy? 
+
+---
+
+class: middle, center
+### ⚠️ (Some of) the main assets of GBADs include data, models, and modelling outputs ⚠️
+
+???
+
+I want you to keep this in mind throughout the presentation. we could argue that the main assets of GBADs include the data models and modelling outputs. yes, the data belongs to others, but we are consolidating it in one place and harmonizing it's structure which means we are able to compare this data better. We are also producing models which create outputs that will inform policy decisions. 
+
+So keeping this idea in mind...
+
+---
+
+.left.top.header[1 - Introduction - What is data governance?]
+
+## What is data governance? 
+
+"Everything you do to ensure data is secure, private, accurate, available, and usable. 
+
+It includes: 
+
+🎬 the actions people must take,
+
+--
+   
+🔄 the processes they must follow, and,
+
+--
+
+👨‍💻 **the technology** that supports them throughout the data life cycle." .small[&lt;a id='cite-googleDataGov'&gt;&lt;/a&gt;(&lt;a href='#bib-googleDataGov'&gt;Google, 2023&lt;/a&gt;)]
+
+???
+
+Google defines data governance as everything you do to ensure data is secure, private, accurate, available, and usable including the actions people must take, the processes they must follow and the technology that supports them throughout the data life cycle.
+
+In other words, data governance is the overall management framework for data assets, and data derived assets (such as models).
+
+It is a set of policies, procedures, and standards that define how data is collected, processed, analyzed, and shared across an organization. 
+
+The goal of data governance is to ensure that data is accurate, complete, and consistent across different systems, and that it is used in compliance with relevant regulations and best practices. As we will learn, data governance can help organizations and programs reach program or organizational-specific goals, particularly in data-driven estimates such as models. 
+
+---
+
+class: middle,center
+
+.left.top.header[1 - Introduction - Importance of Data Governance]
+
+
+# Why Data Governance?
+
+![](https://media.giphy.com/media/3cXmze4Y8igXdnkc3U/giphy.gif)
+
+???
+
+So.... why data governance? well.. let's start with the negative stuff
+
+
+
+Data governance is essential to mitigate the negative consequences of having poor data governance. Some of such consequences include: 
+
+---
+.left.top.header[1 - Introduction - Importance of Data Governance]
+
+## (Some) Impacts of Poor Data Governance 🙇‍♀️
+
+--
+
+* Poor data quality 
+
+
+* Low trust in estimates, data, modelling outputs 
+
+--
+
+* Can't access or find data
+
+
+* Private data is not secure 
+
+--
+
+* Can't reproduce or replicate data cleaning or modelling methodologies  
+
+
+* Can't understand the context or meaning of data
+
+???
+
+
+GBADs needs data governance because our work is so centered around data. We are data users and creators. The models themselves need also to be governed including the inputs and outputs.
+
+By implementing data governance practices, we can reduce the risk of errors in our analysis, improve replicability and reproducibility, increase the efficiency of our research and ultimately produce better results and mitigate our risk of the impacts of poor data governance 
+
+---
+
+.left.top.header[1 - Introduction - Importance of data governance]
+## Data governance ensures that there are processes and tools in place for: 
+
+.pull-left[
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M16 0H144c5.3 0 10.3 2.7 13.3 7.1l81.1 121.6c-49.5 4.1-94 25.6-127.6 58.3L2.7 24.9C-.6 20-.9 13.7 1.9 8.5S10.1 0 16 0zM509.3 24.9L401.2 187.1c-33.5-32.7-78.1-54.2-127.6-58.3L354.7 7.1c3-4.5 8-7.1 13.3-7.1H496c5.9 0 11.3 3.2 14.1 8.5s2.5 11.5-.8 16.4zM432 336c0 97.2-78.8 176-176 176s-176-78.8-176-176s78.8-176 176-176s176 78.8 176 176zM264.4 241.1c-3.4-7-13.3-7-16.8 0l-22.4 45.4c-1.4 2.8-4 4.7-7 5.1L168 298.9c-7.7 1.1-10.7 10.5-5.2 16l36.3 35.4c2.2 2.2 3.2 5.2 2.7 8.3l-8.6 49.9c-1.3 7.6 6.7 13.5 13.6 9.9l44.8-23.6c2.7-1.4 6-1.4 8.7 0l44.8 23.6c6.9 3.6 14.9-2.2 13.6-9.9l-8.6-49.9c-.5-3 .5-6.1 2.7-8.3l36.3-35.4c5.6-5.4 2.5-14.8-5.2-16l-50.1-7.3c-3-.4-5.7-2.4-7-5.1l-22.4-45.4z"/></svg> Data Quality
+
+<svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432V346.1z"/></svg> Data Storage
+
+<svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M224 16c-6.7 0-10.8-2.8-15.5-6.1C201.9 5.4 194 0 176 0c-30.5 0-52 43.7-66 89.4C62.7 98.1 32 112.2 32 128c0 14.3 25 27.1 64.6 35.9c-.4 4-.6 8-.6 12.1c0 17 3.3 33.2 9.3 48H45.4C38 224 32 230 32 237.4c0 1.7 .3 3.4 1 5l38.8 96.9C28.2 371.8 0 423.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7c0-58.5-28.2-110.4-71.7-143L415 242.4c.6-1.6 1-3.3 1-5c0-7.4-6-13.4-13.4-13.4H342.7c6-14.8 9.3-31 9.3-48c0-4.1-.2-8.1-.6-12.1C391 155.1 416 142.3 416 128c0-15.8-30.7-29.9-78-38.6C324 43.7 302.5 0 272 0c-18 0-25.9 5.4-32.5 9.9c-4.7 3.3-8.8 6.1-15.5 6.1zm56 208H267.6c-16.5 0-31.1-10.6-36.3-26.2c-2.3-7-12.2-7-14.5 0c-5.2 15.6-19.9 26.2-36.3 26.2H168c-22.1 0-40-17.9-40-40V169.6c28.2 4.1 61 6.4 96 6.4s67.8-2.3 96-6.4V184c0 22.1-17.9 40-40 40zm-88 96l16 32L176 480 128 288l64 32zm128-32L272 480 240 352l16-32 64-32z"/></svg> Data Security and Privacy
+
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336c44.2 0 80-35.8 80-80s-35.8-80-80-80s-80 35.8-80 80s35.8 80 80 80z"/></svg> Data Standards and Metadata]
+
+.pull-right[
+
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M512 256c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM161.5 169.9c-12.2-5.2-26.3 .4-31.5 12.6s.4 26.3 12.6 31.5l11.9 5.1c17.3 7.4 35.2 12.9 53.6 16.3v50.1c0 4.3-.7 8.6-2.1 12.6l-28.7 86.1c-4.2 12.6 2.6 26.2 15.2 30.4s26.2-2.6 30.4-15.2l24.4-73.2c1.3-3.8 4.8-6.4 8.8-6.4s7.6 2.6 8.8 6.4l24.4 73.2c4.2 12.6 17.8 19.4 30.4 15.2s19.4-17.8 15.2-30.4l-28.7-86.1c-1.4-4.1-2.1-8.3-2.1-12.6V235.5c18.4-3.5 36.3-8.9 53.6-16.3l11.9-5.1c12.2-5.2 17.8-19.3 12.6-31.5s-19.3-17.8-31.5-12.6L338.7 175c-26.1 11.2-54.2 17-82.7 17s-56.5-5.8-82.7-17l-11.9-5.1zM256 160c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40s17.9 40 40 40z"/></svg> Data Access
+
+<svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M224 96c38.4 0 73.7 13.5 101.3 36.1l-32.6 32.6c-4.6 4.6-5.9 11.5-3.5 17.4s8.3 9.9 14.8 9.9H416c8.8 0 16-7.2 16-16V64c0-6.5-3.9-12.3-9.9-14.8s-12.9-1.1-17.4 3.5l-34 34C331.4 52.6 280.1 32 224 32c-10.9 0-21.5 .8-32 2.3V99.2c10.3-2.1 21-3.2 32-3.2zM100.1 154.7l32.6 32.6c4.6 4.6 11.5 5.9 17.4 3.5s9.9-8.3 9.9-14.8V64c0-8.8-7.2-16-16-16H32c-6.5 0-12.3 3.9-14.8 9.9s-1.1 12.9 3.5 17.4l34 34C20.6 148.6 0 199.9 0 256c0 10.9 .8 21.5 2.3 32H67.2c-2.1-10.3-3.2-21-3.2-32c0-38.4 13.5-73.7 36.1-101.3zM445.7 224H380.8c2.1 10.3 3.2 21 3.2 32c0 38.4-13.5 73.7-36.1 101.3l-32.6-32.6c-4.6-4.6-11.5-5.9-17.4-3.5s-9.9 8.3-9.9 14.8V448c0 8.8 7.2 16 16 16H416c6.5 0 12.3-3.9 14.8-9.9s1.1-12.9-3.5-17.4l-34-34C427.4 363.4 448 312.1 448 256c0-10.9-.8-21.5-2.3-32zM224 416c-38.4 0-73.7-13.5-101.3-36.1l32.6-32.6c4.6-4.6 5.9-11.5 3.5-17.4s-8.3-9.9-14.8-9.9H32c-8.8 0-16 7.2-16 16l0 112c0 6.5 3.9 12.3 9.9 14.8s12.9 1.1 17.4-3.5l34-34C116.6 459.4 167.9 480 224 480c10.9 0 21.5-.8 32-2.3V412.8c-10.3 2.1-21 3.2-32 3.2z"/></svg> Data Lifecycle Management &amp; Verison Control
+
+<svg aria-hidden="true" role="img" viewBox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M206.7 45.1C224.2 17 255 0 288 0s63.8 17 81.3 45.1l38.6 61.7 27-15.6c8.4-4.9 18.9-4.2 26.6 1.7s11.1 15.9 8.6 25.3l-23.4 87.4c-3.4 12.8-16.6 20.4-29.4 17l-87.4-23.4c-9.4-2.5-16.3-10.4-17.6-20s3.4-19.1 11.8-23.9l28.4-16.4L315 79c-5.8-9.3-16-15-27-15s-21.2 5.7-27 15l-17.5 28c-9.2 14.8-28.6 19.5-43.6 10.5c-15.3-9.2-20.2-29.2-10.7-44.4l17.5-28zM461.5 251.9c15-9 34.4-4.3 43.6 10.5l24.4 39.1c9.4 15.1 14.4 32.4 14.6 50.2c.3 53.1-42.7 96.4-95.8 96.4L352 448v32c0 9.7-5.8 18.5-14.8 22.2s-19.3 1.7-26.2-5.2l-64-64c-9.4-9.4-9.4-24.6 0-33.9l64-64c6.9-6.9 17.2-8.9 26.2-5.2s14.8 12.5 14.8 22.2v32l96.2 0c17.6 0 31.9-14.4 31.8-32c0-5.9-1.7-11.7-4.8-16.7l-24.4-39.1c-9.5-15.2-4.7-35.2 10.7-44.4zm-364.6-31L68 204.2c-8.4-4.9-13.1-14.3-11.8-23.9s8.2-17.5 17.6-20l87.4-23.4c12.8-3.4 26 4.2 29.4 17L214 241.2c2.5 9.4-.9 19.3-8.6 25.3s-18.2 6.6-26.6 1.7l-26.5-15.3-51.5 82.4c-3.1 5-4.8 10.8-4.8 16.7c-.1 17.6 14.2 32 31.8 32l32.2 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-32.2 0c-53.1 0-96.1-43.2-95.8-96.4c.1-17.8 5.1-35.1 14.6-50.2l50.3-80.5z"/></svg> Reproducibility ]
+
+--
+
+### **... and all these processes need to be documented**
+
+---
+
+.left.top.header[1 - Introduction - Components of a data governance strategy]
+
+# The Big Picture 
+
+.pull-left[
+
+Through a data governance strategy that addresses: 
+* discoverability,
+* security,
+* accountability 
+* (and standards)
+
+.tiny[&lt;a id='cite-eryurek2021'&gt;&lt;/a&gt;&lt;a href='#bib-eryurek2021'&gt;Eryurek, Gilad, Lakshmanan, Kibunguchy-Grant, and Ashdown (2021)&lt;/a&gt;]]
+
+.pull-right[
+&lt;img src="img/dataGov_eryuek.png" width='80%',height='90%'&gt;
+]
+
+---
+
+.left.top.header[1 - Introduction - Components of a data governance strategy]
+
+# The Big Picture 
+
+.pull-left[
+
+Through a *data governance strategy* that addresses: 
+* discoverability,
+* security,
+* accountability 
+* standards
+
+.tiny[&lt;a href='#bib-eryurek2021'&gt;Eryurek, Gilad, Lakshmanan et al. (2021)&lt;/a&gt;]]
+
+.pull-right[
+&lt;img src="img/dataGov_eryuek.png" width='80%',height='90%'&gt;
+]
+
+---
+.left.top.header[1 - Introduction - Components of a data governance strategy]
+
+# Data Governance Strategy
+
+**parts:**
+
+<svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M384 32H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H398.4c-5.2 25.8-22.9 47.1-46.4 57.3V448H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H320 128c-17.7 0-32-14.3-32-32s14.3-32 32-32H288V153.3c-23.5-10.3-41.2-31.6-46.4-57.3H128c-17.7 0-32-14.3-32-32s14.3-32 32-32H256c14.6-19.4 37.8-32 64-32s49.4 12.6 64 32zM125.8 177.3L51.1 320H204.9L130.2 177.3c-.4-.8-1.3-1.3-2.2-1.3s-1.7 .5-2.2 1.3zM128 128c18.8 0 36 10.4 44.7 27l77.8 148.5c3.1 5.8 6.1 14 5.5 23.8c-.7 12.1-4.8 35.2-24.8 55.1C210.9 402.6 178.2 416 128 416s-82.9-13.4-103.2-33.5c-20-20-24.2-43-24.8-55.1c-.6-9.8 2.5-18 5.5-23.8L83.3 155c8.7-16.6 25.9-27 44.7-27zm384 48c-.9 0-1.7 .5-2.2 1.3L435.1 320H588.9L514.2 177.3c-.4-.8-1.3-1.3-2.2-1.3zm-44.7-21c8.7-16.6 25.9-27 44.7-27s36 10.4 44.7 27l77.8 148.5c3.1 5.8 6.1 14 5.5 23.8c-.7 12.1-4.8 35.2-24.8 55.1C594.9 402.6 562.2 416 512 416s-82.9-13.4-103.2-33.5c-20-20-24.2-43-24.8-55.1c-.6-9.8 2.5-18 5.5-23.8L467.3 155z"/></svg> Data Principles
+
+--
+
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192s192-86 192-192zm64 0c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM256 336c44.2 0 80-35.8 80-80s-35.8-80-80-80s-80 35.8-80 80s35.8 80 80 80zm0 64c-79.5 0-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144s-64.5 144-144 144zm32-144c0 17.7-14.3 32-32 32s-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32z"/></svg> Data Goals
+
+--
+
+<svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M308.5 135.3c7.1-6.3 9.9-16.2 6.2-25c-2.3-5.3-4.8-10.5-7.6-15.5L304 89.4c-3-5-6.3-9.9-9.8-14.6c-5.7-7.6-15.7-10.1-24.7-7.1l-28.2 9.3c-10.7-8.8-23-16-36.2-20.9L199 27.1c-1.9-9.3-9.1-16.7-18.5-17.8C173.7 8.4 166.9 8 160 8s-13.7 .4-20.4 1.2c-9.4 1.1-16.6 8.6-18.5 17.8L115 56.1c-13.3 5-25.5 12.1-36.2 20.9L50.5 67.8c-9-3-19-.5-24.7 7.1c-3.5 4.7-6.8 9.6-9.9 14.6l-3 5.3c-2.8 5-5.3 10.2-7.6 15.6c-3.7 8.7-.9 18.6 6.2 25l22.2 19.8C32.6 161.9 32 168.9 32 176s.6 14.1 1.7 20.9L11.5 216.7c-7.1 6.3-9.9 16.2-6.2 25c2.3 5.3 4.8 10.5 7.6 15.6l3 5.2c3 5.1 6.3 9.9 9.9 14.6c5.7 7.6 15.7 10.1 24.7 7.1l28.2-9.3c10.7 8.8 23 16 36.2 20.9l6.1 29.1c1.9 9.3 9.1 16.7 18.5 17.8c6.7 .8 13.5 1.2 20.4 1.2s13.7-.4 20.4-1.2c9.4-1.1 16.6-8.6 18.5-17.8l6.1-29.1c13.3-5 25.5-12.1 36.2-20.9l28.2 9.3c9 3 19 .5 24.7-7.1c3.5-4.7 6.8-9.5 9.8-14.6l3.1-5.4c2.8-5 5.3-10.2 7.6-15.5c3.7-8.7 .9-18.6-6.2-25l-22.2-19.8c1.1-6.8 1.7-13.8 1.7-20.9s-.6-14.1-1.7-20.9l22.2-19.8zM208 176c0 26.5-21.5 48-48 48s-48-21.5-48-48s21.5-48 48-48s48 21.5 48 48zM504.7 500.5c6.3 7.1 16.2 9.9 25 6.2c5.3-2.3 10.5-4.8 15.5-7.6l5.4-3.1c5-3 9.9-6.3 14.6-9.8c7.6-5.7 10.1-15.7 7.1-24.7l-9.3-28.2c8.8-10.7 16-23 20.9-36.2l29.1-6.1c9.3-1.9 16.7-9.1 17.8-18.5c.8-6.7 1.2-13.5 1.2-20.4s-.4-13.7-1.2-20.4c-1.1-9.4-8.6-16.6-17.8-18.5L583.9 307c-5-13.3-12.1-25.5-20.9-36.2l9.3-28.2c3-9 .5-19-7.1-24.7c-4.7-3.5-9.6-6.8-14.6-9.9l-5.3-3c-5-2.8-10.2-5.3-15.6-7.6c-8.7-3.7-18.6-.9-25 6.2l-19.8 22.2c-6.8-1.1-13.8-1.7-20.9-1.7s-14.1 .6-20.9 1.7l-19.8-22.2c-6.3-7.1-16.2-9.9-25-6.2c-5.3 2.3-10.5 4.8-15.6 7.6l-5.2 3c-5.1 3-9.9 6.3-14.6 9.9c-7.6 5.7-10.1 15.7-7.1 24.7l9.3 28.2c-8.8 10.7-16 23-20.9 36.2L315.1 313c-9.3 1.9-16.7 9.1-17.8 18.5c-.8 6.7-1.2 13.5-1.2 20.4s.4 13.7 1.2 20.4c1.1 9.4 8.6 16.6 17.8 18.5l29.1 6.1c5 13.3 12.1 25.5 20.9 36.2l-9.3 28.2c-3 9-.5 19 7.1 24.7c4.7 3.5 9.5 6.8 14.6 9.8l5.4 3.1c5 2.8 10.2 5.3 15.5 7.6c8.7 3.7 18.6 .9 25-6.2l19.8-22.2c6.8 1.1 13.8 1.7 20.9 1.7s14.1-.6 20.9-1.7l19.8 22.2zM464 400c-26.5 0-48-21.5-48-48s21.5-48 48-48s48 21.5 48 48s-21.5 48-48 48z"/></svg> Processes, people &amp; technologies to meet goals and that align with principles 
+
+--
+
+<svg aria-hidden="true" role="img" viewBox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M565.6 36.24C572.1 40.72 576 48.11 576 56V392C576 401.1 569.8 410.9 560.5 414.4L392.5 478.4C387.4 480.4 381.7 480.5 376.4 478.8L192.5 417.5L32.54 478.4C25.17 481.2 16.88 480.2 10.38 475.8C3.882 471.3 0 463.9 0 456V120C0 110 6.15 101.1 15.46 97.57L183.5 33.57C188.6 31.6 194.3 31.48 199.6 33.23L383.5 94.52L543.5 33.57C550.8 30.76 559.1 31.76 565.6 36.24H565.6zM48 421.2L168 375.5V90.83L48 136.5V421.2zM360 137.3L216 89.3V374.7L360 422.7V137.3zM408 421.2L528 375.5V90.83L408 136.5V421.2z"/></svg> A roadmap and communication plan that
+
+
+*Communicates all elements of data governance to internal and external stakeholders*
+
+
+---
+
+class: center
+.left.top.header[1 - Introduction]
+
+&lt;br&gt;&lt;/br&gt;
+&lt;br&gt;&lt;/br&gt;
+
+.middle[# `Hello` Data Governance Handbook]
+
+---
+
+# Agenda
+
+1. Introduction
+
+2. **Data Governance Handbook Walkthrough**
+    
+    * Overview
+    * Handbook navigation and structure 
+    * Data principles and goals 
+    * Overview of each section of the handbook
+
+3. Current challenges
+
+4. Needs from collaborators
+
+5. Discussion and next steps
+
+???
+In our handbook walkthrough we will provide an overview of the handbook and the main gaols
+
+We provide information about navigating the handbook and its overall structure
+
+We'll give information about the data principles and goals that underlie the data governance framework
+
+and we provide a overview of each section of the handbook with emphasis on the sections that are most relevant for you
+
+---
+
+.left.top.header[2 - Data Governance Handbook Walkthrough - Overview]
+
+
+![img](./img/DGHScreenshot.png)
+
+&lt;br&gt;&lt;/br&gt;
+#### The Data Governance Handbook is available online on the GBADs Informatics Documentation Server Website
+
+<svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/></svg> https://gbadskedoc.org/docs/Data-Governance-Handbook-for-GBADs/intro
+
+???
+The data governance handbook is available online on the GBADs Informatics Documentation Server Website 
+
+So it starts with an overview of what the book is all about
+
+---
+
+.left.top.header[2 - Data Governance Handbook Walkthrough - Overview]
+
+
+![img](./img/DGHScreenshot.png)
+
+
+* Describes how we **&lt;u&gt;manage&lt;/u&gt;** data and metadata in the Knowledge Engine
+
+--
+
+* Documents the **&lt;u&gt;guidelines, standard practices, best practices, and procedures&lt;/u&gt;** related to GBADs data use, management, and governance
+
+--
+
+* Outlines **&lt;u&gt;individual and group data management and governance responsibilities&lt;/u&gt;**.
+
+???
+
+And in general, it describes how we manage data and metadata in the Knowledge Engine, it documents the guidelines, standard practices, best practices ..
+
+
+
+---
+
+.left.top.header[2 - Data Governance Handbook Walkthrough - Overview]
+
+
+
+.center.middle[![](https://media.giphy.com/media/11RwocOdukxqN2/giphy-downsized-large.gif)
+
+The Data Governance Handbook is a **"living document"**. This means that it is continuously updated and edited.]
+
+???
+The data governance handbook is a living document.
+
+We can't anticipate the changing circumstances and evolving needs that may come with our data practices. 
+
+The living document allows us to addm ore info as new best practices emerge 
+
+We can also continually improve the document based on feedback and lessons learned
+
+and.. it is living because we want to encourage collaboration and feedback from multipel stakeholders so we can ensure that it can get to a point where it is comprehensive and reflects the needs of all parties that it might be applicable to 
+
+We also are still developing our methods and software for each component of data governance. For instance, we have software developers working on data quality but we are still deciding on metrics. Therefore, we will document these practices as we create them.
+
+---
+
+.left.top.header[2 - Data Governance Handbook Walkthrough - Handbook navigation and structure]
+
+### Navigating the Handbook
+
+
+![navigate](img/navigating.png)
+
+???
+First, to get to the handbook you go to GBADs Informatics Doc site and click on 'Docs' on the navigation bar. 
+
+Then, click on data governance handbook for gbads. 
+
+This should open up the left navigation pane which shows each chapter in the book. The right navigation pane shows the subsections of each chapter in the book. 
+
+So if you click "Reproducibility" for example, it will bring you down to that section.
+
+You can also see where you are in the handbook by looking at the top of the book. So you can see the Data Gov. Handbook for GBADs &gt; Data principles 
+
+---
+
+.left.top.header[2 - Data Governance Handbook Walkthrough - Data principles and goals]
+
+.pull-left[
+&lt;img src="img/afif-ramdhasuma-jl4BQJs87Do-unsplash.jpg", width = 90%, height = 80%&gt;]
+
+## Data Principles and Goals
+
+<svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg> Provide direction and purpose for data governance
+
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192s192-86 192-192zm64 0c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM256 336c44.2 0 80-35.8 80-80s-35.8-80-80-80s-80 35.8-80 80s35.8 80 80 80zm0 64c-79.5 0-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144s-64.5 144-144 144zm32-144c0 17.7-14.3 32-32 32s-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32z"/></svg> Goals specify the desired outcomes 
+
+<svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M288 64c0 17.7-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32H256c17.7 0 32 14.3 32 32zm0 256c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H256c17.7 0 32 14.3 32 32zM0 192c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg> Principles guide behavior and decision-making involved in managing data, ensuring alignment with core values
+
+???
+
+So firstly, our goals and principles for data governance: 
+
+Goals and principles are important in a data governance framework because they provide a clear direction and purpose for managing data within an organization. 
+
+Goals specify the outcomes that an organization seeks to achieve through its data governance program, 
+
+while principles guide the behavior and decision-making of individuals involved in managing data. 
+
+So for example, if our goal was to ensure that data is accessible, and one of our data principles was to ensure that we are trustworthy, we would make sure that data is accessible, but only to those who have permission. So in sum,
+they provide a framework for ensure that the data governance procedures align with the organization's mission and values. 
+---
+
+.left.top.header[2 - Data Governance Handbook Walkthrough - Data principles and goals]
+
+.pull-left[
+&lt;img src="img/dataPrinciples.png", width = 60%, height = 60%&gt;]
+
+## Data Principles
+
+.pull-right[
+
+ FAIR(S) &amp; 
+ CARE &amp;
+ Trust &amp;
+ Reproducibility 
+ 
+&lt;img src="img/roadToReproducibility.png", width = 1000%, height = 10%&gt;
+
+]
+
+
+
+
+???
+
+Our data principles are highlighted in the data principles section of the handbook.
+
+So our main data principles include ensuring that data is findable, accessible, interoperable and reusable or fair ... 
+
+---
+
+.left.top.header[2 - Data Governance Handbook Walkthrough - Data principles and goals]
+
+.pull-left[
+&lt;img src="img/Goals.png", width = 60%, height = 60%&gt;]
+
+## Goals
+
+.pull-right[
+✨ 12 Data Goals for GBADs ✨ 
+split into 4 categories: 
+
+
+
+* .blue-button[general]
+
+* .red-button[data and metadata]
+
+* .yellow-button[models and data visualizations]
+
+* .green-button[data literacy]]
+
+???
+
+The data governance operating model section provides a detailed breakdown of the data goals used for GBADs, and the specific repsonsibilities of each working group. 
+
+We have used the working group structure to provided a detailed breakdown of the data goals for GBADs, along with the specific responsibilities of each working group. The Working groups have overlapping responsibilities to ensure that these goals are met and that data practices are aligned with the principles to ensure trust and confidence in our decision making. 
+
+---
+
+.left.top.header[2 - Data Governance Handbook Walkthrough - Overview of each section - .red-button[Data Quality]]
+
+
+## Data Quality 
+
+&lt;img src='img/dataQualityParts.png'&gt;
+
+
+???
+
+Data quality is an essential component of data governance as it ensures that the data used by GBADs is accurate and reliable, which is crucial for producing high-quality models and outputs. 
+
+To find information about data quality practices you can navigate to the data quality pane in the handbook
+
+The definition of data quality depends on the context of use, and GBADs use six dimensions of data quality to assess and communicate the quality of data.
+
+While data quality falls under the responsibility of working groups 2 and 3, GBADs informatics is developing tools to support data quality analysis, including data "stories," analysis of data sources, and ontology and SHACL for validating data.
+
+We are still populating this part of the handbook as the students finish up their preliminary data quality analysis for the summer.
+
+---
+
+.left.top.header[2-Data Governance Handbook Walkthrough - Overview of each section - .red-button[Metadata]]
+
+## Metadata 
+
+.pull-left[
+
+
+"Data about data" 
+
+How we are documenting data
+
+How we are documenting data provenance (how data flows across lifecycle)
+
+Standards we are using
+
+How metadata is being managed]
+
+.pull-right[
+
+&lt;img src='img/metadataModel.drawio.png'&gt;]
+
+???
+
+Metadata management is the process of organizing, storing, and maintaining metadata. In graph databases, metadata management can involve tasks such as defining and enforcing a schema, ensuring data quality and consistency, and providing access control and security.
+
+We want to ensure that all our data is well documented so it can be findable, accessible, interoperable, and reusable in the knowledge engine. We also want others to know what standards we are using so they can interpret the metadata that we provide. 
+
+This is all documented in the metadata section of the handbook.
+
+We also provide information about data lineage and provenance, and how metadata is being managed in graph databases (including what graph databases are.)
+
+---
+
+.left.top.header[2-Data Governance Handbook Walkthrough - Overview of each section - .red-button[Education and Best Practices ]]
+
+.pull-left[
+&lt;img src='img/educationalResources.png' width=70%&gt;
+]
+
+.pull-right[
+
+### Educational Materials and Best Practices 
+
+Best practices for coding
+
+How to organize spreadsheets according to best practices 
+
+Tutorial for GitHub
+
+![](https://media.giphy.com/media/Dh5q0sShxgp13DwrvG/giphy.gif)]
+
+
+???
+The next section of the handbook is educational materials and best practices
+
+Right now this consists of best practices for coding in R, how to format data in spreadsheets so that they can be easily interpreted and ingested by software, and how to use GitHub,
+
+
+---
+
+.left.top.header[2-Data Governance Handbook Walkthrough - Overview of each section - .red-button[Accessing Data in the Knowledge Engine]]
+
+.pull-left[
+&lt;img src='img/accessingData.png' width=60%&gt;
+]
+
+### Accessing Data in the Knowledge Engine (KE)
+
+Classifies data "types" in the KE 
+
+Describes methods for data storage and access
+
+Provides info on how to access each type of data 
+
+### .center[&lt;img src='img/s3bucket.png' width=10%&gt;]
+
+???
+In this section we classify the types of data in the KE, we describe the methods for storage and access, and we provide info on how to access each type of data.
+
+So going back to the handbook, we can see that 
+
+To access data in the Knowledge Engine, there are two main ways: through the Application Programming Interface (API) and direct download through a URL from an Amazon S3 Bucket. 
+
+And that there are three main types of data stored in the Knowledge Engine are input data, output data from models, and intermediate data sets.
+
+Input data includes raw data obtained from sources such as  (FAOSTAT), parameters obtained from meta-analyses from systematic reviews, and data sets produced from expert elicitation exercises.
+
+Output data from models may be used in subsequent models or estimations, and intermediate data sets are produced through a stage in modeling or imputation but are not considered an end product. 
+
+We can find definitions of APIs and S3 buckets, as well as other storage and information about the different ways you can access the data including the API, the data portal interface, the S3 bucket.
+
+So the API provides machine-to-machine access to data, and the current functionality includes providing access to data contained in the public databases, providing a list of all tables contained in the public databases, and providing names of all fields and data types of those fields for a given table. 
+
+Data from the API is also available via Amazon S3 buckets, which is a cloud object storage service that allows users to store data and other digital objects in the cloud.
+
+---
+
+.left.top.header[2-Data Governance Handbook Walkthrough - Overview of each section - .red-button[Data Licenses, Security and Privacy]]
+
+## Data Licenses, Security and Privacy
+
+![](http://gbadske.org/Documentation/DataGovernanceHandbook/_images/20210723_AgDataSpectrum_ODI.png)
+
+???
+Finally we have data licenses security and privacy. We aren't currently hosting any private data, but we need to be able to anticipate how we will handle it.
+
+This section provides all information about how we plan on keeping private data private and secure including the technology that will support this. 
+
+This is especially important for anyone interested in data alliances because we want to make sure that potential sources know we can handle their personal and private data. 
+
+---
+
+# Agenda
+
+1. Introduction
+
+2. Data Governance Handbook Walkthrough
+    
+3. **Current challenges**
+
+    * Issues that arise when data governance is not implemented
+
+4. Needs from collaborators
+
+5. Discussion and next steps
+
+---
+
+.left.top.header[3 - Current challenges - Issues that arise when data governance is not implemented]
+
+## Issues that arise when data governance is not implemented
+
+😱 Inconsistent results 
+
+--
+
+🗑 Wasted time and resources 
+
+--
+
+💫 Errors and inaccuracies 
+
+--
+
+📉 Reduced reproducibility 
+
+--
+
+😢 Lack of credibility and trust
+
+---
+
+# Agenda
+
+1. Introduction
+
+2. Data Governance Handbook Walkthrough
+
+3. Current challenges
+
+4. **Needs from collaborators**
+
+    * Adopt our data sharing and reproducibility culture  
+    * What our data governance strategy is missing
+    * Feedback and contributing
+
+5. Discussion and next steps
+
+---
+
+.left.top.header[4 - Needs from collaborators - Adopt our data sharing and reproducibility culture ]
+
+.pull-left[
+&lt;img src="img/klara-kulikova-QATxlTPJImo-unsplash.jpg", width = 80%, height = 60%&gt;]
+
+### Adopt our data sharing and reproducibility culture by: 
+
+* Using the data that is available in the GBADs KE 
+
+--
+
+* Let us know when you have a new dataset
+
+--
+
+* Ensuring that all modelling efforts are well documented, code is in GitHub, and inputs and outputs from models are documented 
+
+---
+
+.left.top.header[4 - Needs from collaborators - What our DG strategy is missing ]
+
+## Needs from collaborators
+
+**Reminder**: Data governance includes defining how data is **processed**, **analyzed**, and **shared** across the program.
+
+--
+
+.center[&lt;img src='img/FA_AMU_model.png' width=79%&gt;]
+.tiny[Figure from: https://gbads.firstanalytics.us/#AMU-Regional-Global]
+
+.center[**This includes models and estimates!**]
+
+???
+So in review, so far we have gone through the basics of data governance and why we need it, what the data governance handbook is, why we need it, and how we can use it.
+
+Given our definition of data governance, it also includes how data is processed, analyzed and shared across the program. Informatics is dealing with how to store data and provide a means for dissemination and discovery of data in the knowledge engine, but what about the data that is processed or analyzed into....
+
+models and estimates... 
+
+Therefore models themselves have to be part of the data governance strategy. But I am not a modeler :( so it is currently not part of our handbook... 
+
+---
+
+.left.top.header[4 - Needs from collaborators - What our DG strategy is missing ]
+
+## Best practices for modelling 
+
+#### How are you: 
+
+* Documenting models
+
+--
+
+* Validating models
+
+--
+
+* Calculating uncertainty
+
+--
+
+* Structuring outputs from models 
+
+--
+
+* Ensuring that others have access to your models and outputs 
+
+--
+
+* Handling model versioning and change control
+
+--
+
+* Educating stakeholders on how models work
+
+???
+
+Some examples of information that might be in our data governance strategy for models include how models are being documented including the inputs and outputs of models.
+
+How you are validating models, how you calcualte uncertainty, structure outputs..... 
+
+---
+
+.left.top.header[4 - Needs from collaborators - Feedback and contributing ]
+
+## Feedback and contributing 
+
+The Data Governance Handbook is meant to be a **collaborative** handbook to document how we use data as a program. 
+
+--
+
+.pull-left[
+### **2 ways to contribute:** 
+
+1. Email me with edits and suggestions (final slide has contact info)
+
+2. Contribute on GitHub]
+
+.pull-right[
+![octo](https://octodex.github.com/images/socialite.jpg)]
+.small[![src](https://octodex.github.com/images/socialite.jpg)]
+
+???
+
+given that best practices also exist when it comes to modelling, these processes and procedures need to find their way into the data governance handbook. 
+
+There are 2 ways to contribute
+
+The first thing you could do is email me with edits and suggestions - the final slide of this presentation will have my contact info
+
+or you could opt for the second option which is our preferred way - contributing to the handbook directly on GitHub.
+
+
+---
+.left.top.header[4 - - Needs from collaborators - Feedback and contributing]
+.left[## Contributing to the Data Governance Handbook on GitHub  <svg aria-hidden="true" role="img" viewBox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>]
+
+.pull-left[
+#### Contribute changes to repo
+![](img/GitHubRepo.png)
+]
+
+.pull-right[
+#### Create an issue
+![](img/GitHubIssue.png)]
+
+😱 **but I don't know how to use GitHub...**
+
+???
+
+And if this is your preference, which we hope it is, you have two options. First you can contribute changes to the repository or second you can create an issue on GitHub. 
+
+if you don't know how to use GitHub...
+
+We have a tutorial for that! 
+
+---
+
+class:middle, center
+
+#### 🎉 there is a GitHub tutorial in the handbook
+
+![GithubTutorial](img/githubTutorial.png)
+
+.tiny[
+.left[
+<svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/></svg> [https://gbadskedoc.org/docs/Data-Governance-Handbook-for-GBADs/educationalMaterials#github-tutorial)](https://gbadskedoc.org/docs/Data-Governance-Handbook-for-GBADs/educationalMaterials#github-tutorial)]]
+
+???
+
+The GitHub Tutorial is located in the 'Educational Materials and Best Practices' chapter. For easy access you can use the right navigation pane to select GitHub Tutorial 
+
+---
+
+# Agenda
+
+1. Introduction
+
+2. Data Governance Handbook Walkthrough
+
+3. Current challenges
+
+4. Needs from collaborators
+
+5. **Discussion**
+
+---
+
+# Thank you! 
+
+### Find GBADs Informatics: 
+
+<svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/></svg> Informatics Documentation Site: https://gbadskedoc.org/
+
+<svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/></svg> GBADs Data Governance Handbook: https://gbadskedoc.org/docs/Data-Governance-Handbook-for-GBADs/intro
+
+
+### Contribute to the Data Governance Handbook on GitHub:
+<svg aria-hidden="true" role="img" viewBox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> GBADs Informatics: https://github.com/GBADsInformatics/Docs
+
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg> kraymond@uoguelph.ca
+
+???
+And with that I will leave you all with some links and contribution info. 
+
+---
+
+#### References: 
+
+
+
+.tiny[
+&lt;p&gt;&lt;cite&gt;&lt;a id='bib-carroll2020'&gt;&lt;/a&gt;&lt;a href="#cite-carroll2020"&gt;Carroll, S. R., I. Garba, O. L. Figueroa-Rodríguez, et al.&lt;/a&gt;
+(2020).
+&amp;ldquo;The CARE principles for indigenous data governance.&amp;rdquo;
+&lt;/p&gt;&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;cite&gt;&lt;a id='bib-eryurek2021'&gt;&lt;/a&gt;&lt;a href="#cite-eryurek2021"&gt;Eryurek, E., U. Gilad, V. Lakshmanan, et al.&lt;/a&gt;
+(2021).
+&lt;em&gt;Data Governance: The Definitive Guide&lt;/em&gt;.
+O'Reilly Media, Inc.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;cite&gt;&lt;a id='bib-googleDataGov'&gt;&lt;/a&gt;&lt;a href="#cite-googleDataGov"&gt;Google&lt;/a&gt;
+(2023).
+&lt;em&gt;What is Data Governance?&lt;/em&gt;
+&lt;a href="https://cloud.google.com/learn/what-is-data-governance"&gt;https://cloud.google.com/learn/what-is-data-governance&lt;/a&gt;.
+Accessed: 2023-03-06.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;cite&gt;&lt;a id='bib-stacey2022'&gt;&lt;/a&gt;&lt;a href="#cite-stacey2022"&gt;Stacey, D., K. Wulff, N. Chikhalla, et al.&lt;/a&gt;
+(2022).
+&amp;ldquo;From FAIR to FAIRS: Data security by design for the global burden of animal diseases&amp;rdquo;.
+In: &lt;em&gt;Agronomy Journal&lt;/em&gt; 114.5, pp. 2693&amp;ndash;2699.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;cite&gt;&lt;a id='bib-wilkinson2016'&gt;&lt;/a&gt;&lt;a href="#cite-wilkinson2016"&gt;Wilkinson, M. D., M. Dumontier, I. J. Aalbersberg, et al.&lt;/a&gt;
+(2016).
+&amp;ldquo;The FAIR Guiding Principles for scientific data management and stewardship&amp;rdquo;.
+In: &lt;em&gt;Scientific data&lt;/em&gt; 3.1, pp. 1&amp;ndash;9.&lt;/cite&gt;&lt;/p&gt;]
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

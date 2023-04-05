@@ -1,0 +1,44 @@
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
+
+.remark-slide-content {font-size: 120%; }
+
+.tiny {font-size: 50%; }
+.small {font-size: 80%;}
+.header {font-size: 60%; }
+.blue-button{
+   height:25px;
+   width:75px;
+   border-radius: 50px;
+   background-color: #ADD8E6;
+   color:black;
+}
+.red-button{
+   height:25px;
+   width:75px;
+   border-radius: 50px;
+   background-color: #FFCCCB;
+   color:black;
+}
+.yellow-button{
+   height:25px;
+   width:75px;
+   border-radius: 50px;
+   background-color: #FFFFE0;
+   color:black;
+}
+.green-button{
+   height:25px;
+   width:75px;
+   border-radius: 50px;
+   background-color: #90EE90;
+   color:black;
+}
+.grey-button{
+   height:25px;
+   width:75px;
+   border-radius: 50px;
+   background-color:#D3D3D3;
+   color:black;
+}
